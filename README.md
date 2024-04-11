@@ -2,6 +2,7 @@
 
 * Студент: [Ольга Васильева](https://up.htmlacademy.ru/adaptive/31/user/1748441).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Сайт: [Ссылка на проект](https://genntanaka.github.io/1748441-cat-energy-31/).
 
 ---
 
