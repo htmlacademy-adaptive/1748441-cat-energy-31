@@ -1,16 +1,38 @@
+.pagination {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .pagination__title {
   font-family: $secondary-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
   color: #111111;
   margin: 0;
+  margin-bottom: 8px;
+}
+
+.pagination__title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  background:
+    linear-gradient(#d3d3d3, #d3d3d3),
+    linear-gradient(#d3d3d3, #d3d3d3);
+  background-position: center;
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+
 }
 
 .pagination__text {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   text-align: center;
   color: var(--text-basic-color, #444444);
   margin: 0;
@@ -18,4 +40,5 @@
 
 .pagination__button {
   width: 100%;
+  margin-top: 21px;
 }

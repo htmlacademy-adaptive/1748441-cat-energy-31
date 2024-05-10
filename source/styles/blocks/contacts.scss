@@ -1,7 +1,15 @@
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 28px;
+}
+
 .contacts__invite {
   font-family: $secondary-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-transform: uppercase;
   color: #111111;
   margin: 0;
@@ -9,5 +17,9 @@
 
 .contacts__address {
   font-style: normal;
-  line-height: 20px;
+  line-height: 1.42;
+}
+
+.contacts__images {
+  display: block;
 }

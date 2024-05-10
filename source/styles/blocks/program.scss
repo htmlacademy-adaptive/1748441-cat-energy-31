@@ -2,38 +2,104 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .program__item {
   background-color: var(--secondary-background, #f2f2f2);
+  --bgc: #000000;
+  padding: 21px 20px 18px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px auto;
+}
+
+.program__item::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--basic-background-color, #68b738);
+  background-size: 50px 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 23px;
+}
+
+.program__item::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: var(--icon-program);
+  background-color: var(--bgc);
+  position: relative;
+  z-index: 1;
 }
 
 .program__item--slim {
-  //
+  --icon-program: url("../../icons/stack.svg#slim_cat");
+}
+
+.program__item--slim::before {
+  width: 36px;
+  height: 50px;
+  left: 10px;
 }
 
 .program__item--pro {
-  //
+  --icon-program: url("../../icons/stack.svg#pro_cat");
+}
+
+.program__item--pro::before {
+  width: 67px;
+  height: 28px;
+  left: -10px;
+  top: 15px;
 }
 
 .program__title {
   font-family: $secondary-font;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.54;
   text-transform: uppercase;
   color: var(--text-secondary-color, #000000);
-  margin: 0;
+  margin: 0 0 29px;
 }
 
 .program__text {
   margin: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+  grid-column: 1 / -1;
 }
 
 .program__link {
   font-family: $secondary-font;
   font-style: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: var(--text-secondary-color, #000000);
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  grid-column: 1 / -1;
+}
+
+.program__link::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 12px;
+  background-image: url("../../icons/stack.svg#arrow");
+}
+
+.program__link:active {
+  opacity: $standart_opacity_active;
 }

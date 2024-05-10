@@ -4,13 +4,13 @@
 
 .result__list dt {
   font-size: 12px;
-  line-height: 12px;
+  line-height: 1;
 }
 
 .result__list dd {
   font-family: $secondary-font;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   margin: 0;
   text-transform: uppercase;
 }
@@ -18,6 +18,6 @@
 .result__price {
   font-family: $secondary-font;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.42;
   text-transform: uppercase;
 }

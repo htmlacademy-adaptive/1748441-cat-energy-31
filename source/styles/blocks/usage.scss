@@ -2,6 +2,44 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.usage__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.usage__item::before {
+  content: "";
+  min-width: 60px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: var(--icon-usage);
+  background-color: var(--basic-background-color, #68b738);
+  background-size: 30px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.usage__item--health {
+  --icon-usage: url("../../icons/stack.svg#leaf");
+}
+
+.usage__item--water {
+  --icon-usage: url("../../icons/stack.svg#water");
+}
+
+.usage__item--food {
+  --icon-usage: url("../../icons/stack.svg#eat");
+}
+
+.usage__item--time {
+  --icon-usage: url("../../icons/stack.svg#time");
 }
 
 .usage__text {

@@ -18,7 +18,7 @@
 .upsell__title {
   font-family: $secondary-font;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: var(--text-title-color, #222222);
   text-transform: uppercase;
   margin: 0;
@@ -26,7 +26,7 @@
 
 .upsell_characteristics {
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   color: var(--text-basic-color, #444444);
   display: flex;
   justify-content: space-between;

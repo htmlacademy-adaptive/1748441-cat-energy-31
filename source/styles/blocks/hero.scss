@@ -9,6 +9,12 @@
   padding-bottom: 0;
 }
 
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/m-hero-bg@2x.jpg");
+  }
+}
+
 .hero::before {
   content: "";
   display: block;
@@ -23,7 +29,7 @@
 .hero__title {
   font-family: $secondary-font;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: var(--text-light-color, #ffffff);
   margin: 0;
   position: relative;
@@ -34,7 +40,7 @@
 .hero__text {
   font-family: $secondary-font;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   color: var(--text-light-color, #ffffff);
   text-transform: uppercase;
   margin: 0;

@@ -2,10 +2,26 @@
   //
 }
 
-.main-header__logo-image {
-  //
+.main-header__logo-image:hover {
+  opacity: $standart_opacity_hover;
 }
 
-.main-header__logo-text {
-  //
+.main-header__logo-image:active {
+  opacity: $standart_opacity_active;
+}
+
+.main-header__logo-image:focus {
+  opacity: $standart_opacity_focus;
+}
+
+.main-header__logo-text:hover {
+  opacity: $standart_opacity_hover;
+}
+
+.main-header__logo-text:active {
+  opacity: $standart_opacity_active;
+}
+
+.main-header__logo-text:focus {
+  opacity: $standart_opacity_focus;
 }

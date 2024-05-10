@@ -1,7 +1,7 @@
 .cart__link-title {
   font-family: $secondary-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: var(--text-title-color, #222222);
   text-decoration: none;
   text-transform: uppercase;
@@ -13,7 +13,7 @@
 
 .cart__characteristics {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   color: var(--text-basic-color, #444444);
 }
 
