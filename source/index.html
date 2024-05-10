@@ -32,19 +32,19 @@
       </button>
       <ul class="main-nav__list menu-list">
         <li class="menu-list__item menu-list__item--current">
-          <a href="index.html">Главная</a>
+          <a class="menu-list_link" href="index.html">Главная</a>
         </li>
         <li class="menu-list__item">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="menu-list_link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="menu-list__item">
-          <a href="#">Подбор программы</a>
+          <a class="menu-list_link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main">
-    <section class="hero">
+    <section class="hero container">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__text">Занялся собой? Займись котом!</p>
       <picture>
@@ -53,10 +53,10 @@
         <img class="hero__image" src="images/m-hero-jar@1x.png" srcset="images/m-hero-jar@2x.png 2x" width="280" height="270" alt="Баночка с питанием для котом со вкусом курицы">
       </picture>
 
-      <a class="hero__buttom button button--primary" href="#">подобрать программу</a>
+      <a class="hero__button button button--primary" href="#">подобрать программу</a>
     </section>
 
-    <section class="program">
+    <section class="program container">
       <h2 class="visually-hidden">Типы программ питания</h2>
       <ul class="program__list">
         <li class="program__item program__item--slim">
@@ -72,7 +72,7 @@
       </ul>
     </section>
 
-    <section class="usage">
+    <section class="usage container">
       <h2 class="usage__title title">Как это работает</h2>
       <ul class="usage__list">
         <li class="usage__item usage__item--health">
@@ -90,7 +90,7 @@
       </ul>
     </section>
 
-    <section class="result">
+    <section class="result container">
       <h2 class="result__title title">Живой пример</h2>
       <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
       <dl class="result__list">
@@ -118,14 +118,17 @@
     </section>
 
     <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <div class="map">
+      <div class="container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+
+      <div class="contacts__map map">
         <picture>
           <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map@1x.png 1x, images/map@2x.png 2x">
           <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/t-map@1x.png 1x, images/t-map@2x.png 2x">
-          <img class="contacts__map" src="images/m-map@1x.png" srcset="images/m-map@2x.png 2x" width="320" height="362" alt="карта с маркером по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <img class="contacts__images" src="images/m-map@1x.png" srcset="images/m-map@2x.png 2x" width="320" height="362" alt="карта с маркером по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
 
         <!-- будущий фрейм карты -->
@@ -133,7 +136,7 @@
     </section>
 
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <a class="logo logo--footer" href="index.html">
       <img class="main-footer__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
     </a>

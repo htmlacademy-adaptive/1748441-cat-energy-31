@@ -32,20 +32,20 @@
       </button>
       <ul class="main-nav__list menu-list">
         <li class="menu-list__item">
-          <a href="index.html">Главная</a>
+          <a class="menu-list_link" href="index.html">Главная</a>
         </li>
         <li class="menu-list__item menu-list__item--current">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="menu-list_link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="menu-list__item">
-          <a href="#">Подбор программы</a>
+          <a class="menu-list_link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main">
 
-    <section class="catalog">
+    <section class="catalog container">
       <h1 class="catalog-title title">Каталог продукции</h1>
       <ul class="catalog-list">
         <li class="catalog-item cart">
@@ -73,7 +73,7 @@
               <dd>700&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -102,7 +102,7 @@
               <dd>1000&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -131,7 +131,7 @@
               <dd>700&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -159,7 +159,7 @@
               <dd>1000&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -187,7 +187,7 @@
               <dd>400&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -215,7 +215,7 @@
               <dd>700&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
         <li class="catalog-item cart">
@@ -243,7 +243,7 @@
               <dd>500&nbsp;₽</dd>
             </div>
           </dl>
-          <button class="button button--primary" type="button">заказать</button>
+          <button class="cart__button button button--primary" type="button">заказать</button>
         </li>
 
       </ul>
@@ -254,7 +254,7 @@
       </div>
     </section>
 
-    <section class="upsell">
+    <section class="upsell container">
       <h2 class="upsell-title title title--decor">Дополнительные товары</h2>
       <ul class="upsell__list">
         <li class="upsell__item">
@@ -303,7 +303,7 @@
       </div>
     </section>
 
-    <section class="subscribe">
+    <section class="subscribe container">
       <h2 class="subscribe__title title title--decor">Акции и новинки</h2>
       <form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
         <p class="form__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
@@ -314,21 +314,25 @@
     </section>
 
     <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <div class="map">
+      <div class="container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+
+      <div class="contacts__map map">
         <picture>
           <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map@1x.png 1x, images/map@2x.png 2x">
           <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/t-map@1x.png 1x, images/t-map@2x.png 2x">
-          <img class="contacts__map" src="images/m-map@1x.png" srcset="images/m-map@2x.png 2x" width="320" height="362" alt="карта с маркером по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <img class="contacts__images" src="images/m-map@1x.png" srcset="images/m-map@2x.png 2x" width="320" height="362" alt="карта с маркером по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
+
         <!-- будущий фрейм карты -->
       </div>
     </section>
 
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <a class="logo logo--footer" href="index.html">
       <img class="main-footer__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
     </a>

@@ -1,1 +1,30 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+.page {
+  height: 100%;
+}
+
+// прилипающий футер
+.page__body {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-basic-color, #444444);
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  padding: 0 20px;
+}

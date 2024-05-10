@@ -1,0 +1,53 @@
+.hero {
+  background-image: url("../../images/m-hero-bg@1x.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  padding: 27px 35px;
+  padding-bottom: 0;
+}
+
+.hero::before {
+  content: "";
+  display: block;
+  background-color: var(--basic-background, rgba(104, 183, 56, 0.85));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--text-light-color, #ffffff);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 25px;
+}
+
+.hero__text {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--text-light-color, #ffffff);
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__button {
+  position: relative;
+  z-index: 1;
+}

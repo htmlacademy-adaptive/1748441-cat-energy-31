@@ -1,0 +1,31 @@
+.cart__link-title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-title-color, #222222);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cart__title {
+  margin: 0;
+}
+
+.cart__characteristics {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-basic-color, #444444);
+}
+
+.cart__value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__value dd {
+  margin: 0;
+}
+
+.cart__button {
+  width: 100%;
+}

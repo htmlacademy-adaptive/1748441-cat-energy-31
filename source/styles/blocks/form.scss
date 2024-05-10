@@ -1,0 +1,19 @@
+.form__text {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-secondary-color, #000000);
+  text-align: center;
+  margin: 0;
+}
+
+.form__input {
+  font-family: $secondary-font;
+  font-size: 20px;
+  padding: 13px;
+  border: 1px solid #cdcdcd;
+}
+
+.form__button {
+  width: 100%;
+}
