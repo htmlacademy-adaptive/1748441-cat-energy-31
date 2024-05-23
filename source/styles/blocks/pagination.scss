@@ -1,6 +1,14 @@
 .pagination {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @media (min-width: $width-tablet) {
+    margin-top: 85px;
+    border: 2px solid #f2f2f2;
+    padding: 50px 37px 40px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .pagination__title {
@@ -12,6 +20,13 @@
   color: #111111;
   margin: 0;
   margin-bottom: 8px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 175px;
+    margin: auto auto 23px;
+  }
 }
 
 .pagination__title::before {
@@ -28,6 +43,11 @@
   background-size: 100% 2px, 2px 100%;
   background-repeat: no-repeat;
 
+  @media (min-width: $width-tablet) {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 50px;
+  }
 }
 
 .pagination__text {
@@ -36,6 +56,14 @@
   text-align: center;
   color: var(--text-basic-color, #444444);
   margin: 0;
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    line-height: 1.12;
+    max-width: 175px;
+    margin: auto;
+    margin-bottom: 21%;
+  }
 }
 
 .pagination__button {

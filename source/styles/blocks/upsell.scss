@@ -1,7 +1,42 @@
+.upsell {
+  padding-top: 25px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $width-desctop) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+    padding-bottom: 53px;
+  }
+}
+
 .upsell__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
+
+  @media (min-width: $width-desctop) {
+    padding: 0;
+  }
+}
+
+.upsell__wrapper {
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-template-columns: 326px 1fr;
+    width: 100%;
+    padding-right: 40px;
+  }
 }
 
 .upsell__item {
@@ -9,10 +44,34 @@
   display: block;
   padding-top: 13px;
   padding-bottom: 19px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: $width-desctop) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 17px;
+  }
 }
 
 .upsell__item:last-child {
   border-bottom: 1px solid #cdcdcd;
+}
+
+.upsell__main-title {
+  margin-bottom: 35px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-column: 1 / -1;
+  }
 }
 
 .upsell__title {
@@ -22,6 +81,10 @@
   color: var(--text-title-color, #222222);
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: $width-desctop) {
+    font-size: 20px;
+  }
 }
 
 .upsell_characteristics {
@@ -30,6 +93,11 @@
   color: var(--text-basic-color, #444444);
   display: flex;
   justify-content: space-between;
+  margin: 13px 1px;
+
+  @media (min-width: $width-desctop) {
+    margin: 0;
+  }
 }
 
 .upsell__weight {
@@ -42,4 +110,8 @@
 
 .upsell_button {
   width: 100%;
+
+  @media (min-width: $width-desctop) {
+    max-width: 244px;
+  }
 }

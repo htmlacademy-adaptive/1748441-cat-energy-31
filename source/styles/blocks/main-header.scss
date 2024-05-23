@@ -1,5 +1,19 @@
 .main-header {
-  //
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 12px;
+  z-index: 1;
+  // max-height: 65px;max-heightmax-heightmax-heightmax-height
+
+  @media (min-width: $width-tablet) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding-top: 53px;
+  }
 }
 
 .main-header__logo-image:hover {
@@ -24,4 +38,17 @@
 
 .main-header__logo-text:focus {
   opacity: $standart_opacity_focus;
+}
+
+.main-header__logo-text {
+  height: auto;
+  margin: auto;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $width-desctop) {
+    width: 118px;
+  }
 }

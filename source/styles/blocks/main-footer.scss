@@ -1,12 +1,31 @@
 .main-footer {
   background-color: var(--secondary-background, #f2f2f2);
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 152px;
+  }
+
+  @media (min-width: $width-desctop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 169px;
+  }
 }
 
 .main-footer__social {
-  padding-top: 20px;
+  padding-top: 16px;
   padding-bottom: 20px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-footer__developer {
@@ -19,6 +38,12 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    margin: 0;
+    gap: 22px;
+  }
 }
 
 .main-footer__developer::after {

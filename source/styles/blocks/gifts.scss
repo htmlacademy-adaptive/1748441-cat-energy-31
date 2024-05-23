@@ -1,16 +1,37 @@
 .gifts {
   //background-color: var(--basic-background, rgba(104, 183, 56, 0.85));
-  background-image: url("../../images/gift-bg@1x.png");
+  background-image: url("../../images/m-gift-bg@1x.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 43px 55px;
   position: relative;
-}
 
-@media (min-resolution: 2dppx) {
-  .gifts {
+  @media (min-resolution: 2dppx) {
     background-image: url("../../images/gift-bg@2x.png");
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../../images/t-gift-bg@1x.png");
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/t-gift-bg@2x.png");
+    }
+  }
+
+  @media (min-width: $width-desctop) {
+    background-image: url("../../images/gift-bg@1x.png");
+    margin-top: 0;
+    flex-direction: column;
+    padding: 55px 45px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/gift-bg@2x.png");
+    }
   }
 }
 
@@ -34,9 +55,15 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  margin: 0 auto 48px;
+  margin: 15px auto 50px;
   position: relative;
   z-index: 1;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .gifts__text {
@@ -47,4 +74,9 @@
   margin: 0;
   position: relative;
   z-index: 1;
+  max-width: 180px;
+
+  @media (min-width: $width-tablet) {
+    max-width: 215px;
+  }
 }

@@ -1,11 +1,26 @@
 .subscribe {
-  //
+  padding-top: 40px;
+  padding-bottom: 45px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding-top: 45px;
+    padding-bottom: 103px;
+  }
 }
 
 .subscribe__title {
-  //
-}
+  margin-bottom: 30px;
 
-.subscribe__form {
-  //
+  @media (min-width: $width-tablet) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 72px;
+  }
 }

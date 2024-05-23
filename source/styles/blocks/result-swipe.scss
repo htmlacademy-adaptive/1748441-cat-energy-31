@@ -1,0 +1,90 @@
+.result-swipe {
+  margin: auto;
+  padding-top: 107px;
+
+  @media (min-width: $width-desctop) {
+    padding-top: 0;
+  }
+}
+
+.result-swipe__image-comparison {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.result-swipe__image-comparison picture {
+  display: contents;
+}
+
+
+.result-swipe__image-comparison-image-before,
+.result-swipe__image-comparison-image-after {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.result-swipe__image-comparison-image-before {
+  clip-path: inset(0 50% 0 0);
+}
+
+.result-swipe__image-comparison-image-after {
+  clip-path: inset(0 0 0 50%);
+}
+
+.result-swipe__image-comparison-slider {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--icon-color, #666666);
+  cursor: col-resize;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.result-swipe__image-comparison-slider::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -19px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--icon-color, #666666);
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.result-swipe__image-comparison-slider::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 18px;
+  background-color: var(--icon-color, #666666);
+  mask-image: url("../../icons/stack.svg#resize");
+  top: calc(50% - 9px);
+  left: -11px;
+  position: absolute;
+}
+
+.result-swipe__image-comparison-slider:hover,
+.result-swipe__image-comparison-slider:focus,
+.result-swipe__image-comparison-slider:hover::after,
+.result-swipe__image-comparison-slider:focus::after {
+  background-color: var(--button-basic, #68b738);
+}
+
+.result-swipe__image-comparison-slider:hover::before,
+.result-swipe__image-comparison-slider:focus::before {
+  border: 2px solid var(--button-basic, #68b738);
+}
+
+.result-swipe__image-comparison-slider:active,
+.result-swipe__image-comparison-slider:active::after {
+  opacity: 0.6;
+}

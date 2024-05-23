@@ -1,59 +1,156 @@
 .hero {
-  background-image: url("../../images/m-hero-bg@1x.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   position: relative;
+  color: var(--text-light-color, #ffffff);
   text-align: center;
-  padding: 27px 35px;
-  padding-bottom: 0;
-}
 
-@media (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../../images/m-hero-bg@2x.jpg");
+  @media (min-width: $width-tablet) {
+    background: none;
+    color: var(--text-secondary-color, #000000);
+    text-align: left;
+    display: grid;
+  }
+
+  @media (min-width: $width-tablet) {
+    position: static;
+    display: block;
   }
 }
 
-.hero::before {
+.hero__wrapper {
+  padding: 0;
+  display: grid;
+
+  @media (min-width: $width-tablet) {
+    padding: 27px 30px 0;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding: 75px 0;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__wrapper::before {
   content: "";
   display: block;
-  background-color: var(--basic-background, rgba(104, 183, 56, 0.85));
+  position: absolute;
+  background-image: linear-gradient(var(--basic-background, rgba(104, 183, 56, 0.85)) 63%, #ffffff 63%), url("../../images/m-hero-bg@1x.jpg"), linear-gradient(to right, #32521e 50%, #2e3e23 50%);
+  background-position: top;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(var(--basic-background, rgba(104, 183, 56, 0.85)) 63%, #ffffff 63%), url("../../images/m-hero-bg@2x.jpg"), linear-gradient(to right, #32521e 50%, #2e3e23 50%);
+  }
+
+  @media (min-width: $width-tablet) {
+    background: none;
+    color: var(--text-secondary-color, #000000);
+    text-align: left;
+    position: static;
+  }
+
+  @media (min-width: $width-desctop) {
+    top: 0;
+    height: 695px;
+    position: absolute;
+  }
+
+  @media (min-width: $width-desctop) {
+    background-image: linear-gradient(to right, #ffffff 50%, var(--basic-background, rgba(104, 183, 56, 0.85)) 50%), url("../../images/hero-bg@1x.jpg"), linear-gradient(#32521e 50%, #3f5a2c 50%);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #ffffff 50%, var(--basic-background, rgba(104, 183, 56, 0.85)) 50%), url("../../images/hero-bg@2x.jpg"), linear-gradient(#32521e 50%, #3f5a2c 50%);
+    }
+  }
+}
+
+.hero picture {
+  display: contents;
 }
 
 .hero__title {
   font-family: $secondary-font;
   font-size: 36px;
   line-height: 1;
-  color: var(--text-light-color, #ffffff);
-  margin: 0;
   position: relative;
-  z-index: 1;
-  margin-bottom: 25px;
+  padding-top: 27px;
+  max-width: 396px;
+  margin: 0 auto 25px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 60px;
+    max-width: 480px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $width-desctop) {
+    margin-left: 190px;
+  }
 }
 
 .hero__text {
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 1;
-  color: var(--text-light-color, #ffffff);
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 10px 29px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+  }
+
+  @media (min-width: $width-desctop) {
+    margin-left: 190px;
+    grid-column: 1;
+  }
 }
 
 .hero__image {
   position: relative;
-  z-index: 1;
+  vertical-align: middle;
+  margin: auto;
+
+  @media (min-width: $width-tablet) {
+    margin-top: -82px;
+    order: 4;
+    z-index: -1;
+  }
+
+  @media (min-width: $width-desctop) {
+    margin-top: -61px;
+    margin-left: -21%;
+    grid-column: 2 / -1;
+    grid-row: 1 / 7;
+  }
 }
 
 .hero__button {
   position: relative;
   z-index: 1;
+  margin: 0 20px;
+
+  @media (min-width: $width-tablet) {
+    width: fit-content;
+    font-size: 20px;
+    padding: 14px 26px;
+    margin-left: 90px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-column: 1;
+    margin-left: 190px;
+  }
 }

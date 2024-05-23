@@ -17,7 +17,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header container">
     <a class="logo logo--header" href="index.html">
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg" width="70" height="59">
@@ -27,33 +27,36 @@
       <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle toggle" type="button">
+      <button class="main-nav__toggle toggle" type="button" id="toggle">
         <span class="visually-hidden">Показать или скрыть меню</span>
       </button>
       <ul class="main-nav__list menu-list">
         <li class="menu-list__item menu-list__item--current">
-          <a class="menu-list_link" href="index.html">Главная</a>
+          <a class="menu-list__link" href="index.html">Главная</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list_link" href="catalog.html">Каталог продукции</a>
+          <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list_link" href="#">Подбор программы</a>
+          <a class="menu-list__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main">
-    <section class="hero container">
-      <h1 class="hero__title">Функциональное питание для котов</h1>
-      <p class="hero__text">Занялся собой? Займись котом!</p>
-      <picture>
-        <source width="522" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero-jar@1x.png 1x, images/hero-jar@2x.png 2x">
-        <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/t-hero-jar@1x.png 1x, images/t-hero-jar@2x.png 2x">
-        <img class="hero__image" src="images/m-hero-jar@1x.png" srcset="images/m-hero-jar@2x.png 2x" width="280" height="270" alt="Баночка с питанием для котом со вкусом курицы">
-      </picture>
+    <section class="hero">
+      <div class="hero__wrapper container">
+        <h1 class="hero__title">Функциональное питание для котов</h1>
+        <p class="hero__text">Занялся собой? Займись котом!</p>
+        <picture>
+          <source width="522" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero-jar@1x.png 1x, images/hero-jar@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/t-hero-jar@1x.png 1x, images/t-hero-jar@2x.png 2x">
+          <img class="hero__image" src="images/m-hero-jar@1x.png" srcset="images/m-hero-jar@2x.png 2x" width="280" height="270" alt="Баночка с питанием для котом со вкусом курицы">
+        </picture>
 
-      <a class="hero__button button button--primary" href="#">подобрать программу</a>
+        <a class="hero__button button button--primary" href="#">подобрать программу</a>
+      </div>
+
     </section>
 
     <section class="program container">
@@ -93,34 +96,44 @@
     <section class="result container">
       <h2 class="result__title title">Живой пример</h2>
       <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="result__list">
-        <dt>снижение веса</dt>
-        <dd>5 кг</dd>
-        <dt>затрачено времени</dt>
-        <dd>60 дней</dd>
-      </dl>
-      <p class="result__price">
-        <span>Затраты на питание:</span><span>15 000 руб.</span>
-      </p>
-      <div class="result__images result-swipe">
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/t-before-cat@1x.png 1x, images/t-before-cat@2x.png 2x">
-          <img class="result-swipe__before" src="images/m-before-cat@1x.png" srcset="images/m-before-cat@2x.png 2x" width="280" height="256" alt="Толстый черно белый кот до приема специального питания">
-        </picture>
-
-        <span class="result-swipe__button"></span>
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/t-after-cat@1x.png 1x, images/t-after-cat@2x.png 2x">
-          <img class="result-swipe__after" src="images/m-after-cat@1x.png" srcset="images/m-after-cat@2x.png 2x" width="280" height="256" alt="Стройный черно белый кот после приема специально питания">
-        </picture>
-
+      <div class="result_indicators">
+        <dl class="result__list">
+          <div class="result__item">
+            <dt>снижение веса</dt>
+            <dd>5&nbsp;кг</dd>
+          </div>
+          <div class="result__item">
+            <dt>затрачено времени</dt>
+            <dd>60&nbsp;дней</dd>
+          </div>
+        </dl>
+        <p class="result__price">
+          <span>Затраты на питание:</span><span>15 000 руб.</span>
+        </p>
       </div>
+
+      <div class="result__images result-swipe">
+        <div class="result-swipe__image-comparison">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/t-before-cat@1x.png 1x, images/t-before-cat@2x.png 2x">
+            <img class="result-swipe__image-comparison-image-before" src="images/m-before-cat@1x.png" srcset="images/m-before-cat@2x.png 2x" width="280" height="256" alt="Толстый черно белый кот до приема специального питания">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/t-after-cat@1x.png 1x, images/t-after-cat@2x.png 2x">
+            <img class="result-swipe__image-comparison-image-after" src="images/m-after-cat@1x.png" srcset="images/m-after-cat@2x.png 2x" width="280" height="256" alt="Стройный черно белый кот после приема специально питания">
+          </picture>
+          <button class="result-swipe__image-comparison-slider" type="button">
+            <span class="visually-hidden">Ползунок движения влево-вправо для просмотра результатов до и после</span>
+          </button>
+        </div>
+      </div>
+
     </section>
 
     <section class="contacts">
       <div class="container contacts__container">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__invite">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__invite">приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
 

@@ -1,3 +1,18 @@
+.usage {
+  padding-top: 45px;
+  padding-bottom: 49px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+}
+
 .usage__list {
   list-style: none;
   margin: 0;
@@ -5,12 +20,52 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    counter-reset: example 0;
+    gap: 37px 59px;
+    margin-top: 70px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
 }
 
 .usage__item {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    counter-increment: myIndex;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.usage__item::after {
+  @media (min-width: $width-tablet) {
+    content: counter(myIndex);
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 1;
+    color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    right: 27%;
+    z-index: -1;
+  }
+
+  @media (min-width: $width-desctop) {
+    top: -38px;
+    right: 0;
+  }
 }
 
 .usage__item::before {
@@ -24,6 +79,11 @@
   background-size: 30px 32px;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: $width-tablet) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .usage__item--health {
@@ -44,4 +104,9 @@
 
 .usage__text {
   margin: 0;
+
+  @media (min-width: $width-tablet) {
+    max-width: 240px;
+    margin-top: 11px;
+  }
 }
