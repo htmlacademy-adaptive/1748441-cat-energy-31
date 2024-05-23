@@ -39,13 +39,18 @@
 }
 
 .container {
-  padding: 0 20px;
+  //padding: 0 20px;
+  margin: 0 auto;
+  max-width: 280px;
 
   @media (min-width: $width-tablet) {
-    padding: 0 30px;
+    //padding: 0 30px;
+    max-width: 708px;
   }
 
   @media (min-width: $width-desctop) {
-    padding: 0 110px;
+    //padding: 0 110px;
+    margin: 0 auto;
+    max-width: 1220px;
   }
 }

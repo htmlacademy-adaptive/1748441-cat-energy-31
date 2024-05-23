@@ -1,6 +1,10 @@
 .result-swipe {
   margin: auto;
-  padding-top: 107px;
+  padding-top: 19px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 107px;
+  }
 
   @media (min-width: $width-desctop) {
     padding-top: 0;

@@ -16,6 +16,19 @@
   }
 }
 
+.main-footer__wrapper {
+  @media (min-width: $width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 152px;
+  }
+
+  @media (min-width: $width-desctop) {
+    min-height: 169px;
+  }
+}
+
 .main-footer__social {
   padding-top: 16px;
   padding-bottom: 20px;
