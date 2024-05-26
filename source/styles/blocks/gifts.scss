@@ -1,0 +1,87 @@
+.gifts {
+  background-image: url("../../images/m-gift-bg@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 43px 55px;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/gift-bg@2x.png");
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../../images/t-gift-bg@1x.png");
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 77px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/t-gift-bg@2x.png");
+    }
+  }
+
+  @media (min-width: $width-desctop) {
+    background-image: url("../../images/gift-bg@1x.png");
+    margin-top: 0;
+    flex-direction: column;
+    padding: 55px 45px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/gift-bg@2x.png");
+    }
+  }
+}
+
+.gifts::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--basic-background, rgba(104, 183, 56, 0.85));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gifts::before {
+  content: "";
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-image: url("../../icons/stack.svg#icon_gift");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 15px auto 50px;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.gifts__text {
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--text-light-color, #ffffff);
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 180px;
+
+  @media (min-width: $width-tablet) {
+    text-align: left;
+    max-width: 209px;
+  }
+
+  @media (min-width: $width-desctop) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,119 @@
+.usage {
+  padding-top: 18px;
+  padding-bottom: 49px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 37px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+}
+
+.usage__title {
+  margin: 0;
+}
+
+.usage__list {
+  list-style: none;
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    counter-reset: example 0;
+    gap: 37px 59px;
+    margin-top: 71px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    margin-top: 72px;
+  }
+}
+
+.usage__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    counter-increment: myIndex;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.usage__item::after {
+  @media (min-width: $width-tablet) {
+    content: counter(myIndex);
+    color: #f2f2f2;
+    z-index: -1;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 0.73;
+    position: absolute;
+    top: 0;
+    left: 116px;
+  }
+
+  @media (min-width: $width-desctop) {
+    top: -38px;
+    right: 0;
+    line-height: 1;
+  }
+}
+
+.usage__item::before {
+  content: "";
+  min-width: 60px;
+  height: 60px;
+  display: inline-block;
+  align-self: flex-start;
+  background-image: var(--icon-usage);
+  background-color: var(--basic-background-color, #68b738);
+  background-size: 30px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $width-tablet) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.usage__item--health {
+  --icon-usage: url("../../icons/stack.svg#leaf");
+}
+
+.usage__item--water {
+  --icon-usage: url("../../icons/stack.svg#water");
+}
+
+.usage__item--food {
+  --icon-usage: url("../../icons/stack.svg#eat");
+}
+
+.usage__item--time {
+  --icon-usage: url("../../icons/stack.svg#time");
+}
+
+.usage__text {
+  margin: 0;
+
+  @media (min-width: $width-tablet) {
+    max-width: 246px;
+    margin-top: 11px;
+  }
+}

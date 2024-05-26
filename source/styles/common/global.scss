@@ -1,1 +1,70 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+.page {
+  height: 100%;
+}
+
+// прилипающий футер
+.page__body {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1.28;
+  color: var(--text-basic-color, #444444);
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: $width-desctop) {
+    position: relative;
+  }
+}
+
+.page__body.page__body--open {
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 280px;
+
+  @media (min-width: $width-tablet) {
+    max-width: 708px;
+  }
+
+  @media (min-width: $width-desctop) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+}
+
+// стили при отключеном javascript
+.no-js .main-header {
+  flex-direction: column;
+}
+
+.no-js .main-nav {
+  width: 100%;
+}
+
+.no-js .toggle {
+  display: none;
+}
+
+.no-js .main-nav__list {
+  display: block;
+}

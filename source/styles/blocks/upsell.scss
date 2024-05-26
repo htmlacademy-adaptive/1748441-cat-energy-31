@@ -1,0 +1,165 @@
+.upsell {
+  padding-top: 27px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $width-desctop) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+    padding-bottom: 53px;
+  }
+}
+
+.upsell__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 35px;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    border: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $width-desctop) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.upsell__wrapper {
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 335px 1fr;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-template-columns: 323px 1fr;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+
+.upsell__item {
+  border-bottom: 1px solid #cdcdcd;
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  @media (min-width: $width-tablet) {
+    padding: 26px 37px 28px;
+  }
+
+  @media (min-width: $width-desctop) {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0 18px;
+    gap: 10px;
+  }
+}
+
+.upsell__item:first-child {
+  @media (min-width: $width-desctop) {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.upsell__item:last-child {
+  border-bottom: none;
+
+  @media (min-width: $width-desctop) {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.upsell__main-title {
+  margin-bottom: 39px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 80px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $width-desctop) {
+    grid-column: 1 / -1;
+    margin-left: 0;
+  }
+}
+
+.upsell__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-title-color, #222222);
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $width-desctop) {
+    font-size: 20px;
+  }
+}
+
+.upsell_characteristics {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-basic-color, #444444);
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 1px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    justify-content: end;
+  }
+
+  @media (min-width: $width-desctop) {
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+
+.upsell__weight {
+  margin: 0;
+
+  @media (min-width: $width-tablet) {
+    text-align: right;
+  }
+}
+
+.upsell__price {
+  margin: 0;
+
+  @media (min-width: $width-tablet) {
+    min-width: 93px;
+    text-align: right;
+  }
+
+  @media (min-width: $width-desctop) {
+    min-width: 75px;
+    text-align: left;
+  }
+}
+
+.upsell_button {
+  width: 100%;
+
+  @media (min-width: $width-tablet) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $width-desctop) {
+    max-width: 244px;
+    margin: 0;
+  }
+}
