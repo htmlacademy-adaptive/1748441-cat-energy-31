@@ -1,5 +1,7 @@
 .social {
-  //
+  @media (min-width: $width-tablet) {
+    padding-left: 33px;
+  }
 }
 
 .social__list {
@@ -10,10 +12,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 28px;
-}
 
-.social__item {
-  //
+  @media (min-width: $width-tablet) {
+    gap: 24px;
+  }
 }
 
 .social__link {

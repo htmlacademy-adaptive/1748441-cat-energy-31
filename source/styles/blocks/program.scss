@@ -34,11 +34,11 @@
 .program__item {
   background-color: var(--secondary-background, #f2f2f2);
   --bgc: #000000;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 22px;
   position: relative;
   display: grid;
   grid-template-columns: 70px auto;
-  grid-template-rows: 70px auto;
+  grid-template-rows: auto auto;
 
   @media (min-width: $width-tablet) {
     padding: 65px 53px;
@@ -50,6 +50,7 @@
   @media (min-width: $width-desctop) {
     padding: 47px 52px 55px;
     grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr auto;
     column-gap: 62px;
   }
 }
@@ -118,7 +119,8 @@
     height: 194px;
     bottom: 19px;
     left: 20px;
-    top: -6px;
+    top: 15px;
+    align-self: flex-start;
   }
 
   @media (min-width: $width-desctop) {
@@ -126,6 +128,7 @@
     width: 70px;
     height: 97px;
     left: 15px;
+    top: -6px;
   }
 }
 
@@ -142,16 +145,17 @@
   @media (min-width: $width-tablet) {
     width: 268px;
     height: 112px;
-    top: 4px;
-    left: -40px;
+    top: 68px;
+    left: -42px;
+    align-self: flex-start;
   }
 
   @media (min-width: $width-desctop) {
     grid-column: 1 / 2;
     width: 134px;
     height: 56px;
-    top: -4px;
-    left: -17px;
+    top: 20px;
+    left: -18px;
   }
 }
 
@@ -162,13 +166,14 @@
   text-transform: uppercase;
   color: var(--text-secondary-color, #000000);
   margin: 0;
-  margin-top: 12px;
+  margin-top: 9px;
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / 2;
     font-size: 36px;
     line-height: 1;
-    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $width-desctop) {
@@ -183,7 +188,7 @@
 .program__text {
   margin: 0;
   padding-bottom: 23px;
-  padding-top: 8px;
+  padding-top: 26px;
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 18px;
   grid-column: 1 / -1;
@@ -232,9 +237,16 @@
 .program__link::after {
   content: "";
   display: block;
-  width: 24px;
+  width: 32px;
   height: 12px;
   background-image: url("../../icons/stack.svg#arrow");
+  background-position: -8px;
+  background-repeat: no-repeat;
+}
+
+.program__link:hover::after,
+.program__link:focus::after {
+  background-position: 0;
 }
 
 .program__link:active {

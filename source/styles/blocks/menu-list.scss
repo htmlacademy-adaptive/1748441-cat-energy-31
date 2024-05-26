@@ -49,9 +49,13 @@
 
 .menu-list__link--current {
   text-decoration: underline;
-  text-decoration-color: #ffffff;
+  text-decoration-color: var(--button-basic, #68b738);
   text-decoration-thickness: 2px;
   text-underline-offset: 11px;
+
+  @media (min-width: $width-desctop) {
+    text-decoration-color: #ffffff;
+  }
 }
 
 .main-header--inner .menu-list__link--current {

@@ -1,5 +1,4 @@
 .gifts {
-  //background-color: var(--basic-background, rgba(104, 183, 56, 0.85));
   background-image: url("../../images/m-gift-bg@1x.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 60px 77px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../images/t-gift-bg@2x.png");
@@ -77,6 +77,11 @@
   max-width: 180px;
 
   @media (min-width: $width-tablet) {
-    max-width: 215px;
+    text-align: left;
+    max-width: 209px;
+  }
+
+  @media (min-width: $width-desctop) {
+    text-align: center;
   }
 }

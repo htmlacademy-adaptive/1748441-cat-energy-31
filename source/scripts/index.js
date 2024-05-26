@@ -1,4 +1,6 @@
 /* в этот файл добавляет скрипты*/
+document.querySelector('.page__body').classList.remove('no-js');
+
 document.getElementById('toggle').onclick = openMenu;
 
 function openMenu() {

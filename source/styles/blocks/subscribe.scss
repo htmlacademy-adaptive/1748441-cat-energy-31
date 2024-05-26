@@ -8,19 +8,21 @@
   }
 
   @media (min-width: $width-desctop) {
-    padding-top: 45px;
-    padding-bottom: 103px;
+    padding-top: 41px;
+    padding-bottom: 106px;
   }
 }
 
 .subscribe__title {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   @media (min-width: $width-tablet) {
     margin-bottom: 66px;
+    margin-left: 40px;
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-desctop) {
     margin-bottom: 72px;
+    margin-left: 0;
   }
 }
