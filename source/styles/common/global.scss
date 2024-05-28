@@ -53,18 +53,24 @@
 }
 
 // стили при отключеном javascript
-.no-js .main-header {
-  flex-direction: column;
+@media (max-width: 765px) {
+  .no-js .main-header {
+    flex-direction: column;
+  }
+
+  .no-js .main-nav {
+    width: 100%;
+  }
+
+  .no-js .toggle {
+    display: none;
+  }
+
+  .no-js .main-nav__list {
+    display: block;
+  }
 }
 
-.no-js .main-nav {
-  width: 100%;
-}
-
-.no-js .toggle {
+.no-js iframe {
   display: none;
-}
-
-.no-js .main-nav__list {
-  display: block;
 }
