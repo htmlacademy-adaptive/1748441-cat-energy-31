@@ -100,7 +100,8 @@
   @media (min-width: $width-desctop) {
     margin-left: 0;
     margin-top: 32px;
-    margin-bottom: 5px;
+    margin-bottom: 38px;
+    grid-area: auto;
   }
 }
 
@@ -124,6 +125,7 @@
     grid-column: 1;
     margin-left: 0;
     margin-bottom: 18px;
+    grid-area: auto;
   }
 }
 
@@ -143,7 +145,7 @@
     margin-top: -51px;
     margin-left: -29%;
     grid-column: 2 / -1;
-    grid-row: 1 / 7;
+    grid-row: 1 / 12;
   }
 }
 
@@ -165,8 +167,10 @@
   @media (min-width: $width-desctop) {
     grid-column: 1;
     margin-left: 0;
-    grid-row: 3 / 4;
+    margin-top: 34px;
     height: fit-content;
     width: max-content;
+    max-width: 420px;
+    grid-area: auto;
   }
 }

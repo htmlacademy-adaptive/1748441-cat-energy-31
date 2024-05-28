@@ -58,10 +58,6 @@
   }
 }
 
-.main-header--inner .menu-list__link--current {
-  text-decoration-color: var(--button-basic, #68b738);
-}
-
 .menu-list__link:active {
   opacity: 0.3;
 }
@@ -72,10 +68,4 @@
 
 .menu-list__link:focus {
   opacity: $standart_opacity_active;
-}
-
-.main-header--inner .menu-list__link {
-  @media (min-width: $width-desctop) {
-    color: var(--text-secondary-color, #000000);
-  }
 }

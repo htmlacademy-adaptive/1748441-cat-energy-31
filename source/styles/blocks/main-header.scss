@@ -18,6 +18,16 @@
   }
 }
 
+.main-header--inner .menu-list__link--current {
+  text-decoration-color: var(--button-basic, #68b738);
+}
+
+.main-header--inner .menu-list__link {
+  @media (min-width: $width-desctop) {
+    color: var(--text-secondary-color, #000000);
+  }
+}
+
 .main-header__logo-image:hover {
   opacity: $standart_opacity_hover;
 }

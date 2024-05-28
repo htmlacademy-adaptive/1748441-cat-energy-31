@@ -26,3 +26,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.main-nav--open .toggle::before {
+  background-image: url("../../icons/stack.svg#menu_close");
+}

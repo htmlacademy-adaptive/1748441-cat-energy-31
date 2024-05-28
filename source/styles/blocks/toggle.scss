@@ -2,6 +2,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  padding-top: 3px;
 
   @media (min-width: $width-tablet) {
     display: none;
@@ -14,8 +15,4 @@
   width: 24px;
   height: 24px;
   background-image: url("../../icons/stack.svg#menu_open");
-}
-
-.main-nav--open .toggle::before {
-  background-image: url("../../icons/stack.svg#menu_close");
 }
