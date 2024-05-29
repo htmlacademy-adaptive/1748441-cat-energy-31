@@ -9,6 +9,10 @@
     flex-direction: column;
     grid-row: 2 / -1;
   }
+
+  @media (min-width: $width-desctop) {
+    padding: 50px 37px 40px;
+  }
 }
 
 .pagination__title {
@@ -25,7 +29,7 @@
     font-size: 20px;
     line-height: 1.2;
     max-width: 175px;
-    margin: auto auto 23px;
+    margin: 0 auto;
   }
 
   @media (min-width: $width-desctop) {
@@ -69,15 +73,10 @@
     font-size: 16px;
     line-height: 1.12;
     max-width: 175px;
-    margin: auto auto 60px;
+    margin: 22px auto auto;
   }
 
   @media (min-width: $width-desctop) {
-    margin-top: 26px;
-    margin-bottom: auto;
-  }
-
-  @media (min-width: $width-tablet) {
     margin-top: 26px;
     margin-bottom: auto;
   }

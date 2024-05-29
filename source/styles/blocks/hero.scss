@@ -29,6 +29,7 @@
     padding: 64px 190px;
     grid-template-columns: 1fr 1fr;
     max-width: 1220px;
+    --height-before: 695px;
   }
 }
 
@@ -60,10 +61,11 @@
     background-repeat: no-repeat;
     background-color: var(--button-basic, #68b738);
     background-size: auto 100%;
+    background-position: left bottom;
     top: 0;
     right: 0;
     left: auto;
-    height: 695px;
+    height: var(--height-before);
     position: absolute;
     width: 50%;
 
